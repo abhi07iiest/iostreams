@@ -46,23 +46,22 @@
 <PRE CLASS="broken_ie"><SPAN CLASS="keyword">struct</SPAN> SeekableDevice {
     <SPAN CLASS="keyword">typedef</SPAN> <SPAN CLASS="keyword">char</SPAN>                 char_type;
     <SPAN CLASS="keyword">typedef</SPAN> seekable_device_tag  category;
-    std::streamsize read(<SPAN CLASS="keyword">char</SPAN>* s, std::streamsize n) 
+    std::streamsize read(<SPAN CLASS="keyword">char</SPAN>* s, std::streamsize n)
         {
-            <SPAN CLASS="comment">// Read up to n characters from the input 
-            // sequence into the buffer s, returning   
-            // the number of characters read, or -1 
+            <SPAN CLASS="comment">// Read up to n characters from the input
+            // sequence into the buffer s, returning
+            // the number of characters read, or -1
             // to indicate end-of-sequence.</SPAN>
         }
-    <SPAN CLASS="keyword">void</SPAN> write(<SPAN CLASS="keyword">const</SPAN> <SPAN CLASS="keyword">char</SPAN>* s, std::streamsize n) 
+    <SPAN CLASS="keyword">void</SPAN> write(<SPAN CLASS="keyword">const</SPAN> <SPAN CLASS="keyword">char</SPAN>* s, std::streamsize n)
         {
             <SPAN CLASS="comment">// Write up to n characters from the buffer
-            // s to the output sequence, returning the 
-            // number of characters written</SPAN>
+            // s to the output sequence</SPAN>
         }
-    std::streampos seek(stream_offset off, std::ios_base::seekdir way) 
+    std::streampos seek(stream_offset off, std::ios_base::seekdir way)
         {
-            <SPAN CLASS="comment">// Advances the read/write head by off characters, 
-            // returning the new position, where the offset is 
+            <SPAN CLASS="comment">// Advances the read/write head by off characters,
+            // returning the new position, where the offset is
             // calculated from:
             //  - the start of the sequence if way == ios_base::beg
             //  - the current position if way == ios_base::cur
@@ -174,7 +173,7 @@
 <HR>
 
 <P CLASS="copyright">&copy; Copyright 2008 <a href="http://www.coderage.com/" target="_top">CodeRage, LLC</a><br/>&copy; Copyright 2004-2007 <a href="https://www.boost.org/users/people/jonathan_turkanis.html" target="_top">Jonathan Turkanis</a></P>
-<P CLASS="copyright"> 
+<P CLASS="copyright">
     Distributed under the Boost Software License, Version 1.0. (See accompanying file LICENSE_1_0.txt or copy at <A HREF="http://www.boost.org/LICENSE_1_0.txt">http://www.boost.org/LICENSE_1_0.txt</A>)
 </P>
 
